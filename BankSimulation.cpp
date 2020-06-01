@@ -112,7 +112,7 @@ void GiseControl()
 {
 	while (1)
 	{
-		Sleep(1000);
+		Sleep(100);
 		if (bankqueue.queuelen > mostclientinonetime)
 			mostclientinonetime = bankqueue.queuelen;
 
@@ -168,7 +168,7 @@ void ClientTimer()
 {
 	while (1)
 	{
-		Sleep(1000);
+		Sleep(100);
 		if (bankqueue.queuelen >= 1)
 		{
 			Node * temp = bankqueue.front;
@@ -201,7 +201,7 @@ void Gise1MakeJob(void* args)
 	printf("Musteri%d'e Gise1'de Saat %02d:%02d:%02d'de %s hizmeti verilmeye baslandi.\r\n", arg.clientno, hour, minute, second, islem);
 	while (operationtime)
 	{
-		Sleep(1000);
+		Sleep(100);
 		operationtime--;
 		gise1servetime++;
 	}
@@ -231,7 +231,7 @@ void Gise2MakeJob(void* args)
 	printf("Musteri%d'e Gise2'de Saat %02d:%02d:%02d'de %s hizmeti verilmeye baslandi.\r\n", arg.clientno, hour, minute, second, islem);
 	while (operationtime)
 	{
-		Sleep(1000);
+		Sleep(100);
 		operationtime--;
 		gise2servetime++;
 	}
@@ -257,7 +257,7 @@ void Gise3MakeJob(void* args)
 	printf("Musteri%d'e Gise3'de Saat %02d:%02d:%02d'de %s hizmeti verilmeye baslandi.\r\n", arg.clientno, hour, minute, second, islem);
 	while (operationtime)
 	{
-		Sleep(1000);
+		Sleep(100);
 		operationtime--;
 		gise3servetime++;
 	}
@@ -305,7 +305,7 @@ void ClientCreator(){
 	while (1)
 	{
 		int RandomSleepTime = 1 + (rand() % (5 * 60));
-		Sleep(RandomSleepTime * 1000);
+		Sleep(RandomSleepTime * 100);
 
 		switch (CreateOperation())
 		{
@@ -356,7 +356,7 @@ void Timer()
 {
 	while (1)
 	{
-		Sleep(1000);
+		Sleep(100);
 		second++;
 		if (simulationtime == minute + (hour * 60))
 		{
